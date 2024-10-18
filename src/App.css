@@ -28,3 +28,15 @@ body {
   height: 50vh;
   border: 2px solid #000000;
 }
+
+.selector {
+  width: 9.9vw;
+  height: calc(50vh / 3);
+  float: left;
+  background: lightgray;
+  color: #000000;
+}
+
+.selector > img {
+  width: 4.5vw;
+}
