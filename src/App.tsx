@@ -8,7 +8,12 @@ function App() {
     <>
     <div id="side">
       <div id="left-side">
-        left
+        <div id="top-left">
+          top left
+        </div>
+        <div id="bottom-left">
+          bottom left
+        </div>
       </div>
       <div id="right-side">
         right
