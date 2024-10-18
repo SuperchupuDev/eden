@@ -28,35 +28,3 @@ body {
   height: 50vh;
   border: 2px solid #000000;
 }
-
-#buttons-left {
-  width: 14vw;
-  min-width: 14vw;
-  min-height: 100vh;
-  float: left;
-  border: 2px solid #000000;
-}
-
-#workaround-middle-buttons {
-  margin-left: 14vw;
-  width: 56vw;
-  max-width: 56vw;
-  min-height: 100vh;
-  border: 2px solid #000000;
-}
-
-#right-middle {
-  width: 42vw;
-  max-width: 42vw;
-  min-height: 100vh;
-  float: left;
-  border: 2px solid #000000;
-}
-
-#buttons-right {
-  margin-left: 42vw;
-  width: 14vw;
-  max-width: 14vw;
-  min-height: 100vh;
-  border: 2px solid #000000;
-}
