@@ -9,9 +9,10 @@ import './App.css';
 function App() {
   const [selected, setSelected] = useState<number | null>(null);
   const [vn, setVN] = useState(false);
+  const [talk, setTalk] = useState(0);
 
   return vn ? (
-    <VN setVN={setVN} />
+    <VN setVN={setVN} talk={talk} />
   ) : (
     <div id="side">
       <SelectorManager selected={selected} setSelected={setSelected} />

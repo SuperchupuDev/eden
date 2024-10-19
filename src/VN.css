@@ -21,8 +21,8 @@
 }
 
 #talk-margin {
-  height: 80vh;
-  min-height: 80vh;
+  height: 70vh;
+  min-height: 70vh;
 }
 
 #talk-container {
@@ -35,7 +35,18 @@
   max-height: 20vh;
 }
 
-#talk {
+#name-container {
+  z-index: 9;
+  position: relative;
+  min-width: 60vw;
+  max-width: 60vw;
+  margin-left: 20vw;
+  height: 10vh;
+  max-height: 10vh;
+}
+
+.talk {
+  margin: 0;
   z-index: 9;
   width: 100%;
   max-width: 100%;
@@ -46,6 +57,26 @@
   opacity: 0.8;
   color: #ffffff;
   block-size: fit-content;
-  padding: 1vw;
+  padding: 2vh 1vw;
+  padding-bottom: 0;
+  box-sizing: border-box;
   font-size: 1.5vw;
 }
+
+#namebox {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.eden-name {
+  width: 6vw;
+  margin-left: 54vw;
+}
+
+.milagros-name {
+  width: 8vw;
+}
+
+/* #conversation {
+  padding: 0 1vw;
+} */

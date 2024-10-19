@@ -5,7 +5,7 @@ export const messages = [
       message: 'yes hello i need a plant can you help me make plant hhhhhhhhhhhhhhhhhhhh.'
     },
     {
-      name: 'the other one',
+      name: 'Milagros',
       message: 'sure i will whats your favorite plant.'
     },
     {
