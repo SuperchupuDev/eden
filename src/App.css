@@ -39,4 +39,9 @@ body {
 
 .selector > img {
   width: 4.5vw;
+  pointer-events: none;
+}
+
+.selected {
+  background: #a0a0a0;
 }

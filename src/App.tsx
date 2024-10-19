@@ -1,23 +1,19 @@
-import { useState } from 'react';
 import './App.css';
 
-import { Seed } from './components/Seed';
+import { SeedSelector } from './components/SeedSelector';
+import { ToolSelector } from './components/ToolSelector';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div id="side">
         <div id="left-side">
           <div id="top-left">
-            <Seed />
-            <Seed />
-            <Seed />
-            <Seed />
-            <Seed />
+            <SeedSelector />
           </div>
-          <div id="bottom-left">bottom left</div>
+          <div id="bottom-left">
+            <ToolSelector />
+          </div>
         </div>
         <div id="right-side">right</div>
       </div>

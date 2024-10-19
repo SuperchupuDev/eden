@@ -30,6 +30,7 @@
       },
       "style": {
         "noNegationElse": "error",
+        "noNonNullAssertion": "off",
         "useBlockStatements": "error",
         "useConsistentArrayType": "error",
         "useEnumInitializers": "off",
