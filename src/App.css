@@ -50,3 +50,12 @@ body {
 .selected {
   background: #a0a0a0;
 }
+
+#farm {
+  margin-top: 25vh;
+  margin-inline: auto;
+  width: 100vh;
+  max-width: 100vh;
+  min-height: 50vh;
+  border: 2px solid #000000;
+}

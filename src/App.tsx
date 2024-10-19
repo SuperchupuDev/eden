@@ -15,7 +15,11 @@ function App() {
             <ToolSelector />
           </div>
         </div>
-        <div id="right-side">right</div>
+        <div id="right-side">
+          <div id="farm">
+            waow
+          </div>
+        </div>
       </div>
     </>
   );
