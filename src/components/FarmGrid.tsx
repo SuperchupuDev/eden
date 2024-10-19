@@ -58,7 +58,11 @@ const data = [
   }
 ];
 
-export const FarmGrid = () => {
+interface FarmGridProps {
+  seed: number | null;
+}
+
+export const FarmGrid = ({ seed }: FarmGridProps) => {
   const [selected, setSelected] = useState<number | null>(null);
   const [focused, setFocused] = useState<number | null>(null);
 
@@ -68,6 +72,7 @@ export const FarmGrid = () => {
         <FarmTile
           key={id}
           id={id}
+          seed={seed}
           selected={id === selected}
           setSelected={setSelected}
           focused={id === focused}

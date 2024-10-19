@@ -14,7 +14,7 @@ function App() {
         <SelectorManager selected={selected} setSelected={setSelected} />
         <div id="right-side">
           <div id="farm">
-            <FarmGrid />
+            <FarmGrid seed={selected} />
           </div>
         </div>
       </div>

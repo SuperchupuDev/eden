@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { Selector } from './Selector';
 
-
-
 interface SeedSelectorProps {
-  data: { id: number; name: string, url?: string }[];
+  data: { id: number; name: string; url?: string }[];
   selected: number | null;
   setSelected: (id: number | null) => void;
 }

@@ -72,8 +72,19 @@ body {
   background-image: url("/grid-empty.png");
   background-size: cover;
   color: #000000;
+  position: relative;
 }
 
 .farm-selector:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/grid-empty.png");
+}
+
+#tile-action {
+  position: absolute;
+  height: 10vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
