@@ -65,18 +65,23 @@ body {
 }
 
 .farm-selector {
+  --tile-url: url("/grid-trash.png");
   width: calc(50vh / 3);
   height: calc(50vh / 3);
   border: 0;
   float: left;
-  background-image: url("/grid-empty.png");
+  background-image: var(--tile-url);
   background-size: cover;
   color: #000000;
   position: relative;
 }
 
 .farm-selector:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/grid-empty.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--tile-url);
+}
+
+.farm-selector:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--tile-url);
 }
 
 #tile-action {
