@@ -47,6 +47,10 @@ body {
   pointer-events: none;
 }
 
+.farm-selector > img {
+  pointer-events: none;
+}
+
 .selected {
   background: #a0a0a0;
 }
@@ -58,4 +62,18 @@ body {
   max-width: 100vh;
   min-height: 50vh;
   border: 2px solid #000000;
+}
+
+.farm-selector {
+  width: calc(50vh / 3);
+  height: calc(50vh / 3);
+  border: 0;
+  float: left;
+  background-image: url("/grid-empty.png");
+  background-size: cover;
+  color: #000000;
+}
+
+.farm-selector:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/grid-empty.png");
 }

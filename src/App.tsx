@@ -1,5 +1,6 @@
 import './App.css';
 
+import { FarmGrid } from './components/FarmGrid';
 import { SeedSelector } from './components/SeedSelector';
 import { ToolSelector } from './components/ToolSelector';
 
@@ -17,7 +18,7 @@ function App() {
         </div>
         <div id="right-side">
           <div id="farm">
-            waow
+            <FarmGrid />
           </div>
         </div>
       </div>
