@@ -8,10 +8,10 @@ import './App.css';
 
 function App() {
   const [selected, setSelected] = useState<number | null>(null);
-  const [vn, setVn] = useState(false);
+  const [vn, setVN] = useState(false);
 
   return vn ? (
-    <VN />
+    <VN setVN={setVN} />
   ) : (
     <div id="side">
       <SelectorManager selected={selected} setSelected={setSelected} />
@@ -19,7 +19,7 @@ function App() {
         <div id="farm">
           <FarmGrid seed={selected} />
         </div>
-        <button type="button" onClick={() => setVn(true)}>
+        <button type="button" onClick={() => setVN(true)}>
           [Debug] VN
         </button>
       </div>
