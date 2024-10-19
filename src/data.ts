@@ -11,7 +11,12 @@ import chumbera from './assets/seeds/chumbera.png';
 import tomate from './assets/seeds/tomate.png';
 import hinojo from './assets/seeds/hinojo.png';
 
-import removeUrl from './assets/remove.png';
+import mano from './assets/tools/mano.png';
+import azada from './assets/tools/azada.png';
+import regadera from './assets/tools/regadera.png';
+import yerbajos from './assets/tools/yerbajos.png';
+import abono from './assets/tools/abono.png';
+import hotel from './assets/tools/hotel.png';
 
 export const data = [
   {
@@ -76,28 +81,32 @@ export const data = [
   },
   {
     id: 13,
-    name: 'Remove',
-    url: removeUrl
+    name: 'Mano',
+    url: mano
   },
   {
     id: 14,
-
-    name: 'Tool 2'
+    name: 'Azada',
+    url: azada
   },
   {
     id: 15,
-    name: 'Tool 3'
+    name: 'Regadera',
+    url: regadera
   },
   {
     id: 16,
-    name: 'Tool 4'
+    name: 'Yerbajos',
+    url: yerbajos
   },
   {
     id: 17,
-    name: 'Tool 5'
+    name: 'Abono',
+    url: abono
   },
   {
     id: 18,
-    name: 'Tool 6'
+    name: 'Hotel para insectos',
+    url: hotel
   }
 ];
