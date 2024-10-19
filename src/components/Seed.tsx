@@ -5,11 +5,12 @@ interface SeedProps {
   selected: boolean;
   setSelected: (id: number | null) => void;
   name: string;
+  url?: string;
 }
 
-export const Seed = ({ id, name, selected, setSelected }: SeedProps) => (
+export const Seed = ({ id, name,url, selected, setSelected }: SeedProps) => (
   <button className={`selector ${selected ? 'selected' : ''}`} onClick={() => setSelected(selected ? null : id)}>
-    <img src={seedsUrl} />
+    <img src={url ?? seedsUrl} />
     <br />
     {name}
   </button>

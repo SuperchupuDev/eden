@@ -1,21 +1,17 @@
-import './App.css';
+import { useState } from 'react';
 
 import { FarmGrid } from './components/FarmGrid';
-import { SeedSelector } from './components/SeedSelector';
-import { ToolSelector } from './components/ToolSelector';
+import { SelectorManager } from './components/SelectorManager';
+
+import './App.css';
 
 function App() {
+  const [selected, setSelected] = useState<number | null>(null);
+
   return (
     <>
       <div id="side">
-        <div id="left-side">
-          <div id="top-left">
-            <SeedSelector />
-          </div>
-          <div id="bottom-left">
-            <ToolSelector />
-          </div>
-        </div>
+        <SelectorManager selected={selected} setSelected={setSelected} />
         <div id="right-side">
           <div id="farm">
             <FarmGrid />
