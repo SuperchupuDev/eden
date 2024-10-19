@@ -9,7 +9,11 @@ interface SeedProps {
 }
 
 export const Seed = ({ id, name, url, selected, setSelected }: SeedProps) => (
-  <button className={`selector ${selected ? 'selected' : ''}`} onClick={() => setSelected(selected ? null : id)}>
+  <button
+    className={`selector ${selected ? 'selected' : ''}`}
+    onClick={() => setSelected(selected ? null : id)}
+    type="button"
+  >
     <img src={url ?? seedsUrl} />
     <br />
     {name}

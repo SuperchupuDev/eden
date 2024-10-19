@@ -8,7 +8,7 @@ interface ToolSelectorProps {
 }
 
 export const ToolSelector = ({ data, selected, setSelected }: ToolSelectorProps) => {
-  const [level, setLevel] = useState<number>(10);
+  const [level, setLevel] = useState<number>(13);
 
   return (
     <div>

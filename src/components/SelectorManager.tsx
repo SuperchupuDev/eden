@@ -11,10 +11,10 @@ interface SelectorManagerProps {
 export const SelectorManager = ({ selected, setSelected }: SelectorManagerProps) => (
   <div id="left-side">
     <div id="top-left">
-      <SeedSelector data={data.filter(e => e.id <= 9)} selected={selected} setSelected={setSelected} />
+      <SeedSelector data={data.filter(e => e.id <= 12)} selected={selected} setSelected={setSelected} />
     </div>
     <div id="bottom-left">
-      <ToolSelector data={data.filter(e => e.id > 9)} selected={selected} setSelected={setSelected} />
+      <ToolSelector data={data.filter(e => e.id > 12)} selected={selected} setSelected={setSelected} />
     </div>
   </div>
 );

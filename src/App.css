@@ -30,7 +30,7 @@ body {
 }
 
 #top-left {
-  height: 50vh;
+  height: calc(100vh - 100vh / 3);
   border: 2px solid #000000;
 }
 

@@ -8,7 +8,7 @@ interface SeedSelectorProps {
 }
 
 export const SeedSelector = ({ data, selected, setSelected }: SeedSelectorProps) => {
-  const [level, setLevel] = useState<number>(1);
+  const [level, setLevel] = useState<number>(0);
 
   return (
     <div>

@@ -40,40 +40,40 @@ export const data = [
   },
   {
     id: 10,
+    name: 'Seed 10'
+  },
+  {
+    id: 11,
+    name: 'Seed 11'
+  },
+  {
+    id: 12,
+    name: 'Seed 12'
+  },
+  {
+    id: 13,
     name: 'Remove',
     url: removeUrl
   },
   {
-    id: 11,
+    id: 14,
+
     name: 'Tool 2'
   },
   {
-    id: 12,
+    id: 15,
     name: 'Tool 3'
   },
   {
-    id: 13,
+    id: 16,
     name: 'Tool 4'
   },
   {
-    id: 14,
-
+    id: 17,
     name: 'Tool 5'
   },
   {
-    id: 15,
-    name: 'Tool 6'
-  },
-  {
-    id: 16,
-    name: 'Tool 7'
-  },
-  {
-    id: 17,
-    name: 'Tool 8'
-  },
-  {
     id: 18,
-    name: 'Tool 9'
+    name: 'Tool 6'
   }
 ];

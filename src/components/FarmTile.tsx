@@ -30,7 +30,10 @@ export const FarmTile = ({ id, seed, selected, setSelected, focused, setFocused 
       className={`farm-selector ${selected ? 'selected' : ''}`}
       onClick={() => handleClick({ id, seed, selected, setSelected, state, setState })}
       onMouseOver={() => setFocused(id)}
+      onFocus={() => setFocused(id)}
       onMouseOut={() => (focused ? setFocused(null) : null)}
+      onBlur={() => (focused ? setFocused(null) : null)}
+      type="button"
       ref={ref}
     >
       {focused ? <img id="tile-action" src={seed && data[seed - 1] ? (data[seed - 1].url ?? seedsUrl) : ''} /> : null}
@@ -48,7 +51,7 @@ interface ClickProps {
 }
 
 function handleClick({ id, seed, selected, setSelected, state, setState }: ClickProps) {
-  if (seed === 10 && state === 0) {
+  if (seed === 13 && state === 0) {
     setState(1);
   }
   setSelected(selected ? null : id);

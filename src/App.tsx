@@ -16,6 +16,7 @@ function App() {
           <div id="farm">
             <FarmGrid seed={selected} />
           </div>
+          <button type='button'>[Debug] VN</button>
         </div>
       </div>
     </>
