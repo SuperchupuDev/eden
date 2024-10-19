@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  user-select: none;
 }
 
 #side {
@@ -21,6 +22,10 @@ body {
   width: 70vw;
   max-width: 70vw;
   min-height: 100vh;
+  background-image: url("/farm.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   border: 2px solid #000000;
 }
 

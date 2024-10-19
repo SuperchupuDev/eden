@@ -1,4 +1,4 @@
-import { Seed } from "./Seed";
+import { Seed } from './Seed';
 
 interface SelectorProps {
   data: { id: number; name: string }[];
@@ -12,11 +12,9 @@ export const Selector = ({ data, level, setLevel, selected, setSelected }: Selec
   return (
     <>
       {data.map(({ id, name }) =>
-        level >= id ? (
-          <Seed key={id} id={id} name={name} selected={id === selected} setSelected={setSelected} />
-        ) : null
+        level >= id ? <Seed key={id} id={id} name={name} selected={id === selected} setSelected={setSelected} /> : null
       )}
-      <input type="button" value="Unlock next level" onClick={() => setLevel(level + 1)} />
+      <input type="button" value="[Debug] unlock next level" onClick={() => setLevel(level + 1)} />
     </>
   );
 };
