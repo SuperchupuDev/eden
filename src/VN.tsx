@@ -56,7 +56,9 @@ export const VN = ({ setVN, talk }: VNProps) => {
         <img id="not-eden" src={eden} alt="not-eden" />
         <div id="talk-margin" />
         <div id="name-container">
-          <p className="talk" id="namebox" ref={nameRef}>{name}</p>
+          <p className="talk" id="namebox" ref={nameRef}>
+            {name}
+          </p>
         </div>
         <div id="talk-container">
           <p
@@ -65,7 +67,9 @@ export const VN = ({ setVN, talk }: VNProps) => {
             // biome-ignore lint/a11y/noNoninteractiveTabindex: <explanation>
             tabIndex={0}
             onClick={() => handleClick({ talk, playing, setPlaying, conversation, setText, setVN })}
-            onKeyUp={(e) => e.key === 'Enter' ? handleClick({ talk, playing, setPlaying, conversation, setText, setVN }) : null}
+            onKeyUp={e =>
+              e.key === 'Enter' ? handleClick({ talk, playing, setPlaying, conversation, setText, setVN }) : null
+            }
           >
             {text}
           </p>
