@@ -1,6 +1,8 @@
 #vn {
-  background-image: url("/vn-bg.png");
+  --bg-url: url("/bg-black.png");
+  background-image: var(--bg-url);
   background-size: cover;
+  transition: ease 5s;
   background-position: 50% 50%;
   min-width: 100vw;
 }

@@ -18,6 +18,7 @@ export const VN = ({ setVN, talk }: VNProps) => {
   const [playing, setPlaying] = useState(false);
 
   const nameRef = useRef<HTMLParagraphElement>(null);
+  const vnRef = useRef<HTMLDivElement>(null);
 
   const [showEden, setShowEden] = useState(false);
   const [showMilagros, setShowMilagros] = useState(false);
@@ -33,7 +34,7 @@ export const VN = ({ setVN, talk }: VNProps) => {
     if (!playing) {
       return;
     }
-    const { name, message, _showEden, _showMilagros, _showEdenName, _showMilagrosName } = messages[talk][conversation];
+    const { bg, name, message, _showEden, _showMilagros, _showEdenName, _showMilagrosName } = messages[talk][conversation];
     if (index === 0) {
       setName(name);
       if (_showEdenName !== undefined) {
@@ -47,6 +48,9 @@ export const VN = ({ setVN, talk }: VNProps) => {
       }
       if (_showMilagros) {
         setShowMilagros(true);
+      }
+      if (bg) {
+        vnRef.current?.style.setProperty('--bg-url', `url(${bg})`);
       }
       if (name === 'Edén') {
         nameRef.current?.classList.add('eden-name');
@@ -72,10 +76,10 @@ export const VN = ({ setVN, talk }: VNProps) => {
   }, [index, conversation, talk, playing]);
 
   return (
-    <div id="vn">
+    <div id="vn" ref={vnRef}>
       <div id="side">
-        <img id="eden" style={showMilagros ? {} : { display: 'none' }} src={eden} alt="eden" />
-        <img id="not-eden" style={showEden ? {} : { display: 'none' }} src={eden} alt="not-eden" />
+        <img id="eden" style={showMilagros ? {} : { display: 'none' }} src={eden} alt="Edén" />
+        <img id="not-eden" style={showEden ? {} : { display: 'none' }} src={eden} alt="Milagros" />
         <div id="talk-margin" />
         <div id="name-container">
           <p className="talk eden-name" id="namebox" ref={nameRef}>
