@@ -9,7 +9,8 @@ const states = [
   { id: 2, url: '/grid-arada.png' },
   { id: 3, url: '/grid-semillas-arada.png' },
   { id: 4, url: '/grid-semillas-regada.png' },
-  { id: 5, url: '/grid-hotel.png' }
+  { id: 5, url: '/grid-hotel.png' },
+  { id: 6, url: '/grid-habas.png' }
 ];
 
 interface FarmTileProps {
@@ -158,7 +159,7 @@ function handleClick({
         setVN(true);
         setToolLevel(5);
       }
-      checkHabas({ seed, state, setState, win: fail, fail, fake: true, grid });
+      checkHabas({ grid, seed, state, setState, win: fail, fail, fake: true });
       break;
     }
     case 3: {
@@ -173,7 +174,7 @@ function handleClick({
         setVN(true);
       }
 
-      checkHabas({ seed, state, setState, win, fail });
+      checkHabas({ grid, seed, state, setState, win, fail });
       break;
     }
   }
@@ -234,9 +235,15 @@ function checkHabas({
   grid
 }: CheckProps) {
   console.log('checkHabas', seed, state);
+  console.log(grid);
   if (state === 1) {
     if (seed === 14) {
       setState(2);
+    } else if (seed === 17) {
+      if (grid && grid.flat().filter(([state]) => state === 6).length > 0) {
+        win();
+      }
+      setState(5);
     } else {
       fail();
     }
@@ -245,7 +252,7 @@ function checkHabas({
       if (fake || (grid && grid.flat().filter(([state]) => state === 5).length > 0)) {
         win();
       } else {
-        setState(3);
+        setState(6);
       }
     } else {
       fail();

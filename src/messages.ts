@@ -373,22 +373,133 @@ export const messages = [
   ],
   [
     {
+      bg: '/bg-1.png',
       name: 'Milagros',
-      message: 'actual fail habas'
+      message: 'Primero queriendo echar químicos, y ahora venga a complicarte otra vez.'
     },
     {
-      name: 'Edén',
-      message: 'ah'
+      name: 'Milagros',
+      message:
+        '¡Si ya está regado de los garbanzos! ¡Sólo tienes que hacer un boquete, poner las semillas de las habitas y asegurarte de colocar un hotel para insectos!'
     }
   ],
   [
     {
       name: 'Milagros',
-      message: 'good job habas'
+      _showMilagrosName: false,
+      _showEden: false,
+      _showMilagros: false,
+      message: '(Unas semanas más tarde)'
+    },
+    {
+      _showMilagrosName: true,
+      _showEden: true,
+      name: 'Edén',
+      message: '¿Qué te parece, Milagros? ¿Voy mejorando, no?',
+      bg: '/bg-1.png'
+    },
+    {
+      name: 'Milagros',
+      _showMilagros: true,
+      message: 'En verdad se las ve mucho menos escuchimizadas. Eso va a ser el nitrógeno.'
     },
     {
       name: 'Edén',
-      message: 'thank you'
+      message: '¿El ni-qué?'
+    },
+    {
+      name: 'Milagros',
+      message: 'Ay, es verdad, que tú eres de letras.'
+    },
+    {
+      name: 'Milagros',
+      message:
+        'Hemos plantado garbanzos y habas para que vayan soltando nitrógeno en la tierra, que eso hace que se vaya descontaminando poco a poco y te deja cultivar más plantitas.'
+    },
+    {
+      name: 'Edén',
+      message: 'Aaaah... tiene sentido, creo.'
+    },
+    {
+      name: 'Milagros',
+      message: 'Mejor dejamos lo de medir el PH de la tierra para otro día.'
+    },
+    {
+      name: 'Edén',
+      message:
+        'Es que para mí todo esto es magia. En plan, eso de que yo entierre un garbanzo, le tire agua y ¡pum! ¡Una planta! Parece magia.'
+    },
+    {
+      name: 'Milagros',
+      message: 'Y es magia. No te atrevas a dejar de llamarlo magia solo porque lo entiendas.'
+    },
+    {
+      name: 'Edén',
+      message: 'Bueno, no lo entiendo, así que es más magia todavía. Yo sólo entiendo de leyes.'
+    },
+    {
+      name: 'Milagros',
+      message: '¿Qué, cómo van esas entrevistas de trabajo?'
+    },
+    {
+      name: 'Edén',
+      message: '...'
+    },
+    {
+      name: 'Edén',
+      message: 'De eso sí que vamos a hablar otro día.'
+    },
+    {
+      name: 'Milagros',
+      message: '¿No puedes llegar al juzgado y decir «mira, mira, mi distintivo de letrado, contratadme de abogada»?'
+    },
+    {
+      name: 'Edén',
+      message: '...No'
+    },
+    {
+      name: 'Edén',
+      message: '(¿Qué distintivo de letrado, Milagros? ¿Qué hablas?)'
+    },
+    {
+      name: 'Milagros',
+      message: 'Pues vaya. Sí que está la cosa mala, niña.'
+    },
+    {
+      name: 'Milagros',
+      message: '¡Ay, te traigo lavanda del patio, que casi me olvido!'
+    },
+    {
+      name: 'Milagros',
+      message: 'Me puse a enraizarte unos esquejes cuando me dijiste que ibas a empezar a cuidar el jardín.'
+    },
+    {
+      name: 'Milagros',
+      message: 'En fin, muchas gracias por tu ayuda, Edén.'
+    },
+    {
+      name: 'Milagros',
+      message: 'Pareces estar cansada, yo creo que me las apañaré por un tiempo.'
+    },
+    {
+      name: 'Milagros',
+      message: '¿Por qué no descansas y vuelves en un par de semanas?'
+    },
+    {
+      name: 'Milagros',
+      message: 'Dale recuerdos a Perseida.'
+    },
+    {
+      name: 'Edén',
+      message: 'Gracias. La verdad es que sí, estoy agotada.'
+    },
+    {
+      name: 'Edén',
+      message: 'Nos vemos pronto. Gracias por todo, Milagros.'
+    },
+    {
+      name: 'Milagros',
+      message: 'Las gracias te las doy a ti. ¡Cuídate!'
     }
   ]
 ];
