@@ -19,6 +19,12 @@ export const VN = ({ setVN, talk }: VNProps) => {
 
   const nameRef = useRef<HTMLParagraphElement>(null);
 
+  const [showEden, setShowEden] = useState(false);
+  const [showMilagros, setShowMilagros] = useState(false);
+
+  const [showEdenName, setShowEdenName] = useState(false);
+  const [showMilagrosName, setShowMilagrosName] = useState(false);
+
   useEffect(() => {
     if (talk !== 0 && conversation === 0 && index === 0) {
       setPlaying(true);
@@ -27,9 +33,21 @@ export const VN = ({ setVN, talk }: VNProps) => {
     if (!playing) {
       return;
     }
-    const { name, message } = messages[talk][conversation];
+    const { name, message, _showEden, _showMilagros, _showEdenName, _showMilagrosName } = messages[talk][conversation];
     if (index === 0) {
       setName(name);
+      if (_showEdenName !== undefined) {
+        setShowEdenName(_showEdenName);
+      }
+      if (_showMilagrosName !== undefined) {
+        setShowMilagrosName(_showMilagrosName);
+      }
+      if (_showEden) {
+        setShowEden(true);
+      }
+      if (_showMilagros) {
+        setShowMilagros(true);
+      }
       if (name === 'Edén') {
         nameRef.current?.classList.add('eden-name');
         nameRef.current?.classList.remove('milagros-name');
@@ -41,7 +59,7 @@ export const VN = ({ setVN, talk }: VNProps) => {
     const interval = setInterval(() => {
       setText(prev => prev + message[index]);
       setIndex(prev => prev + 1);
-    }, 50);
+    }, 15);
 
     if (index === message.length) {
       clearInterval(interval);
@@ -56,12 +74,12 @@ export const VN = ({ setVN, talk }: VNProps) => {
   return (
     <div id="vn">
       <div id="side">
-        <img id="eden" src={eden} alt="eden" />
-        <img id="not-eden" src={eden} alt="not-eden" />
+        <img id="eden" style={showMilagros ? {} : { display: 'none' }} src={eden} alt="eden" />
+        <img id="not-eden" style={showEden ? {} : { display: 'none' }} src={eden} alt="not-eden" />
         <div id="talk-margin" />
         <div id="name-container">
           <p className="talk eden-name" id="namebox" ref={nameRef}>
-            {name}
+            {getName({ name, showEdenName, showMilagrosName })}
           </p>
         </div>
         <div id="talk-container">
@@ -82,6 +100,18 @@ export const VN = ({ setVN, talk }: VNProps) => {
     </div>
   );
 };
+
+function getName({ name, showEdenName, showMilagrosName }: { name: string; showEdenName: boolean; showMilagrosName: boolean }) {
+  if (name === 'Edén' && !showEdenName) {
+    return '???';
+  }
+
+  if (name === 'Milagros' && !showMilagrosName) {
+    return '???';
+  }
+
+  return name;
+}
 
 interface ClickProps {
   talk: number;
