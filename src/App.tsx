@@ -64,9 +64,9 @@ function App() {
             states={states}
           />
         </div>
-        <button type="button" onClick={() => setVN(true)}>
+        {/* <button type="button" onClick={() => setVN(true)}>
           [Debug] VN
-        </button>
+        </button> */}
       </div>
     </div>
   );
