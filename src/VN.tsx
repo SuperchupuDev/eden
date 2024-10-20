@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import eden from './assets/eden.png';
+import milagros from './assets/milagros.png';
 
 import { messages } from './messages';
 
@@ -78,8 +79,8 @@ export const VN = ({ setVN, talk }: VNProps) => {
   return (
     <div id="vn" ref={vnRef}>
       <div id="side">
-        <img id="eden" style={showMilagros ? {} : { display: 'none' }} src={eden} alt="Edén" />
-        <img id="not-eden" style={showEden ? {} : { display: 'none' }} src={eden} alt="Milagros" />
+        <img id="eden" style={showMilagros ? {} : { display: 'none' }} src={milagros} alt="Milagros" />
+        <img id="not-eden" style={showEden ? {} : { display: 'none' }} src={eden} alt="Edén" />
         <div id="talk-margin" />
         <div id="name-container">
           <p className="talk eden-name" id="namebox" ref={nameRef}>
@@ -98,6 +99,7 @@ export const VN = ({ setVN, talk }: VNProps) => {
             }
           >
             {text}
+            {playing ? null : <label id="continue" htmlFor="continue"> ▶</label>}
           </p>
         </div>
       </div>

@@ -2,9 +2,18 @@
   --bg-url: url("/bg-black.png");
   background-image: var(--bg-url);
   background-size: cover;
-  transition: ease 5s;
+  transition: ease 1s;
   background-position: 50% 50%;
   min-width: 100vw;
+}
+
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+}
+
+#continue {
+  animation: fadeIn 0.5s infinite alternate;
+  white-space: pre;
 }
 
 #eden {
@@ -12,7 +21,6 @@
   position: fixed;
   top: 25vh;
   left: 10vw;
-  transform: scaleX(-1);
 }
 
 #not-eden {
