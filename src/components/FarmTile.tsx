@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { data } from '../data';
 import seedsUrl from '../assets/seeds.png';
@@ -15,10 +15,26 @@ interface FarmTileProps {
   setSelected: (id: number | null) => void;
   focused: boolean;
   setFocused: (id: number | null) => void;
+  state: number;
+  setState: (state: number) => void;
+  gridStates: [number, (state: number) => void][][];
+  setTalk: (talk: number) => void;
+  setVN: (vn: boolean) => void;
 }
 
-export const FarmTile = ({ id, seed, selected, setSelected, focused, setFocused }: FarmTileProps) => {
-  const [state, setState] = useState(0);
+export const FarmTile = ({
+  id,
+  seed,
+  selected,
+  setSelected,
+  focused,
+  setFocused,
+  state,
+  setState,
+  setTalk,
+  setVN,
+  gridStates
+}: FarmTileProps) => {
   const ref = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -28,7 +44,7 @@ export const FarmTile = ({ id, seed, selected, setSelected, focused, setFocused 
   return (
     <button
       className={`farm-selector ${selected ? 'selected' : ''}`}
-      onClick={() => handleClick({ id, seed, selected, setSelected, state, setState })}
+      onClick={() => handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid: gridStates })}
       onMouseOver={() => setFocused(id)}
       onFocus={() => setFocused(id)}
       onMouseOut={() => (focused ? setFocused(null) : null)}
@@ -46,13 +62,22 @@ interface ClickProps {
   seed: number | null;
   selected: boolean;
   setSelected: (id: number | null) => void;
+  grid: [number, (state: number) => void][][];
   state: number;
   setState: (state: number) => void;
+  setTalk: (talk: number) => void;
+  setVN: (vn: boolean) => void;
 }
 
-function handleClick({ id, seed, selected, setSelected, state, setState }: ClickProps) {
+function handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid }: ClickProps) {
   if (seed === 13 && state === 0) {
     setState(1);
   }
+
+  if (grid.flat().filter(([state]) => state === 1).length === 17 && seed === 13 && state === 0) {
+    setTalk(1);
+    setVN(true);
+  }
+
   setSelected(selected ? null : id);
 }

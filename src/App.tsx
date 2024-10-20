@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   const [selected, setSelected] = useState<number | null>(null);
-  const [vn, setVN] = useState(false);
+  const [vn, setVN] = useState(true);
   const [talk, setTalk] = useState(0);
 
   return vn ? (
@@ -18,7 +18,7 @@ function App() {
       <SelectorManager selected={selected} setSelected={setSelected} />
       <div id="right-side">
         <div id="farm">
-          <FarmGrid seed={selected} />
+          <FarmGrid seed={selected} setTalk={setTalk} setVN={setVN} />
         </div>
         <button type="button" onClick={() => setVN(true)}>
           [Debug] VN

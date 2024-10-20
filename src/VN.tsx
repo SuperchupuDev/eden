@@ -15,11 +15,15 @@ export const VN = ({ setVN, talk }: VNProps) => {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState('');
   const [name, setName] = useState('Edén');
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
 
   const nameRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
+    if (talk !== 0 && conversation === 0 && index === 0) {
+      setPlaying(true);
+    }
+
     if (!playing) {
       return;
     }
@@ -56,7 +60,7 @@ export const VN = ({ setVN, talk }: VNProps) => {
         <img id="not-eden" src={eden} alt="not-eden" />
         <div id="talk-margin" />
         <div id="name-container">
-          <p className="talk" id="namebox" ref={nameRef}>
+          <p className="talk eden-name" id="namebox" ref={nameRef}>
             {name}
           </p>
         </div>

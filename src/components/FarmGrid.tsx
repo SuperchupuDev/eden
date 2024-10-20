@@ -3,6 +3,9 @@ import { FarmTile } from './FarmTile';
 
 const data = [
   {
+    id: 0
+  },
+  {
     id: 1
   },
   {
@@ -52,33 +55,47 @@ const data = [
   },
   {
     id: 17
-  },
-  {
-    id: 18
   }
 ];
 
 interface FarmGridProps {
   seed: number | null;
+  setTalk: (talk: number) => void;
+  setVN: (vn: boolean) => void;
 }
 
-export const FarmGrid = ({ seed }: FarmGridProps) => {
+export const FarmGrid = ({ seed, setTalk, setVN }: FarmGridProps) => {
   const [selected, setSelected] = useState<number | null>(null);
   const [focused, setFocused] = useState<number | null>(null);
 
+  const states = [
+    [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)],
+    [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)],
+    [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)]
+  ];
+
   return (
     <div>
-      {data.map(({ id }) => (
-        <FarmTile
-          key={id}
-          id={id}
-          seed={seed}
-          selected={id === selected}
-          setSelected={setSelected}
-          focused={id === focused}
-          setFocused={setFocused}
-        />
-      ))}
+      {data.map(({ id }) => {
+        const [state, setState] = states[Math.floor(id / 6)][id % 6];
+
+        return (
+          <FarmTile
+            key={id}
+            id={id}
+            seed={seed}
+            selected={id === selected}
+            setSelected={setSelected}
+            focused={id === focused}
+            setFocused={setFocused}
+            state={state}
+            setState={setState}
+            gridStates={states}
+            setTalk={setTalk}
+            setVN={setVN}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -2,15 +2,25 @@ export const messages = [
   [
     {
       name: 'Edén',
-      message: 'yes hello i need a plant can you help me make plant hhhhhhhhhhhhhhhhhhhh.'
+      message: 'intro one'
     },
     {
       name: 'Milagros',
-      message: 'sure i will whats your favorite plant.'
+      message: 'yeah'
     },
     {
       name: 'Edén',
-      message: 'i really like garbanzos'
+      message: 'yeah'
+    }
+  ],
+  [
+    {
+      name: 'Milagros',
+      message: 'you did it'
+    },
+    {
+      name: 'Edén',
+      message: 'yeah'
     }
   ]
 ];
