@@ -36,6 +36,7 @@ export const VN = ({ setVN, talk, setIsWin }: VNProps) => {
     if (!playing) {
       return;
     }
+    // @ts-expect-error
     const { bg, name, message, _showEden, _showMilagros, _showEdenName, _showMilagrosName } =
       messages[talk][conversation];
     console.log(_showEden, _showMilagros, _showEdenName, _showMilagrosName);
