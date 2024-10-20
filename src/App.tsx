@@ -41,6 +41,8 @@ function App() {
           Abdiel
         </a>
         <br />
+        Hecho en JavaScript
+        <br />
         Gracias por jugar
       </>
     );
