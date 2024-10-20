@@ -9,9 +9,10 @@ import './VN.css';
 interface VNProps {
   setVN: (vn: boolean) => void;
   talk: number;
+  setIsWin: (isWin: boolean) => void;
 }
 
-export const VN = ({ setVN, talk }: VNProps) => {
+export const VN = ({ setVN, talk, setIsWin }: VNProps) => {
   const [conversation, setConversation] = useState(0);
   const [index, setIndex] = useState(0);
   const [text, setText] = useState('');
@@ -95,10 +96,10 @@ export const VN = ({ setVN, talk }: VNProps) => {
             id="conversation"
             // biome-ignore lint/a11y/noNoninteractiveTabindex: <explanation>
             tabIndex={0}
-            onClick={() => handleClick({ talk, playing, setPlaying, conversation, setText, setVN })}
+            onClick={() => handleClick({ talk, playing, setPlaying, conversation, setText, setVN, setIsWin })}
             onKeyUp={e =>
               e.key === 'Enter'
-                ? handleClick({ talk, playing, setPlaying, conversation, setText, setVN })
+                ? handleClick({ talk, playing, setPlaying, conversation, setText, setVN, setIsWin })
                 : e.key === 's'
                   ? setVN(false)
                   : null
@@ -141,13 +142,17 @@ interface ClickProps {
   conversation: number;
   setText: (text: string) => void;
   setVN: (vn: boolean) => void;
+  setIsWin: (win: boolean) => void;
 }
 
-function handleClick({ talk, playing, setPlaying, conversation, setText, setVN }: ClickProps) {
+function handleClick({ talk, playing, setPlaying, conversation, setText, setVN, setIsWin }: ClickProps) {
   if (playing) {
     return;
   }
   if (conversation === messages[talk].length) {
+    if (talk === 6) {
+      setIsWin(true);
+    }
     setVN(false);
     return;
   }

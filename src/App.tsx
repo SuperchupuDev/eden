@@ -16,14 +16,22 @@ function App() {
 
   const [level, setLevel] = useState(0);
 
+  const [isWin, setIsWin] = useState(false);
+
   const states = [
     [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)],
     [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)],
     [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)]
   ];
 
+  if (isWin) {
+    return <><h1>Edén</h1>
+    Por <a href="https://twitter.com/superchupu" target='_blank'>Madeline</a>, <a href="https://twitter.com/Rainbow_aspirin" target='_blank'>Celia</a> y <a href="https://twitter.com/Imocade" target='_blank'>Abdiel</a>
+    </>;
+  }
+
   return vn ? (
-    <VN setVN={setVN} talk={talk} />
+    <VN setVN={setVN} talk={talk} setIsWin={setIsWin} />
   ) : (
     <div id="side">
       <SelectorManager selected={selected} setSelected={setSelected} seedLevel={seedLevel} toolLevel={toolLevel + 12} />
