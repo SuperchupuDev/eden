@@ -124,7 +124,7 @@ function handleClick({
   switch (level) {
     case 0: {
       if (seed === 13 && state === 0) {
-        if (grid.flat().filter(([state]) => state === 1).length === 1) {
+        if (grid.flat().filter(([state]) => state === 1).length === 17) {
           setLevel(1);
           setTalk(1);
           setVN(true);
