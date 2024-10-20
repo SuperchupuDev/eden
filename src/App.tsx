@@ -27,6 +27,8 @@ function App() {
   if (isWin) {
     return <><h1>Edén</h1>
     Por <a href="https://twitter.com/superchupu" target='_blank'>Madeline</a>, <a href="https://twitter.com/Rainbow_aspirin" target='_blank'>Celia</a> y <a href="https://twitter.com/Imocade" target='_blank'>Abdiel</a>
+    <br />
+    Gracias por jugar
     </>;
   }
 
