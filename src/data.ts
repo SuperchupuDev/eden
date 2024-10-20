@@ -101,12 +101,12 @@ export const data = [
   },
   {
     id: 17,
-    name: 'Abono',
-    url: abono
+    name: 'Hotel para insectos',
+    url: hotel
   },
   {
     id: 18,
-    name: 'Hotel para insectos',
-    url: hotel
+    name: 'Abono',
+    url: abono
   }
 ];
