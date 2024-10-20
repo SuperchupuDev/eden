@@ -14,7 +14,7 @@ body {
   min-width: 30vw;
   min-height: 100vh;
   float: left;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 #right-side {
@@ -26,12 +26,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 #top-left {
   height: calc(100vh - 100vh / 3);
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .selector {
@@ -61,7 +61,7 @@ body {
   width: 100vh;
   max-width: 100vh;
   min-height: 50vh;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 1px solid brown;
 }
 
 .farm-selector {
@@ -70,6 +70,7 @@ body {
   height: calc(50vh / 3);
   border: 0;
   float: left;
+  background-color: transparent;
   background-image: var(--tile-url);
   background-size: cover;
   color: #000000;
