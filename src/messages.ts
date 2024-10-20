@@ -177,47 +177,198 @@ export const messages = [
     },
     {
       name: 'Edén',
-      message: '(Como me corte pillo)'
+      message: '(Como me corte me da un jari)'
     }
   ],
   [
     {
       name: 'Milagros',
-      message: 'you did it'
+      _showMilagrosName: false,
+      _showEden: false,
+      _showMilagros: false,
+      message: '(Unos días más tarde)'
+    },
+    {
+      _showMilagrosName: true,
+      _showMilagros: true,
+      name: 'Milagros',
+      message: '¡Hala, Edén, qué paliza te has dado!',
+      bg: '/bg-1.png'
     },
     {
       name: 'Edén',
-      message: 'yeah'
+      _showEden: true,
+      message: '¡Milagros, qué susto! ¡Siempre igual!'
+    },
+    {
+      name: 'Milagros',
+      message: '¡Anda, anda!'
+    },
+    {
+      name: 'Milagros',
+      message: 'Te traigo un regalito.'
+    },
+    {
+      name: 'Edén',
+      message: '¿El qué?'
+    },
+    {
+      name: 'Milagros',
+      message: '¡Garbanzos! Es lo primero que deberías plantar, que enriquecen el suelo.'
+    },
+    {
+      name: 'Edén',
+      message: 'Ah, mira tú.'
+    },
+    {
+      name: 'Milagros',
+      message: 'Además son sencillotes, esto se cuida solo. Lo que necesitan es la tierra aireada y poquita agua.'
+    },
+    {
+      name: 'Milagros',
+      message:
+        'Tú coge la azada, le das un buen golpe a donde quieras plantarlo, que eso hace brazo, echas el garbanzo y riega con un chorrito pequeño, que no le hace falta nada más.'
+    }
+  ],
+  [
+    {
+      bg: '/bg-1.png',
+      name: 'Milagros',
+      message:
+        'La que has loado por complicarte. Es muy fácil, Edén, mi niña, no quieras complicarlo de más. Azada, garbanzo y regadera. Sin más.'
     }
   ],
   [
     {
       name: 'Milagros',
-      message: 'text wrong garbanzos'
+      _showMilagrosName: false,
+      _showEden: false,
+      _showMilagros: false,
+      message: '(Dos semanas más tarde)'
+    },
+    {
+      _showMilagrosName: true,
+      _showMilagros: true,
+      name: 'Milagros',
+      message: '¡Ooole esos garbancitos! ¿Ves como se crían ellos solitos?',
+      bg: '/bg-1.png'
     },
     {
       name: 'Edén',
-      message: 'oh :('
+      _showEden: true,
+      message: 'Igualito que cuando era chica y plantaba lentejas en los vasitos de yogur.'
+    },
+    {
+      name: 'Milagros',
+      message: 'E igual de escuchimizadas jajajajaja'
+    },
+    {
+      name: 'Edén',
+      message: '...'
+    },
+    {
+      name: 'Edén',
+      message: 'A ver, sí jajajaja'
+    },
+    {
+      name: 'Milagros',
+      message: 'Ya saldrán más fuertes, que este suelo está fatal. Yo creo que tiene hasta antrax.'
+    },
+    {
+      name: 'Edén',
+      message: '(Pues espero que no)'
+    },
+    {
+      name: 'Milagros',
+      message: 'Mira, te traigo unas habitas pa’ que habiten el campo.'
+    },
+    {
+      name: 'Milagros',
+      message:
+        'Esta es más fácil todavía, porque es igual que los garbanzos, pero como tienes el suelo húmedo ya no tienes que regarlas tanto.'
     }
   ],
   [
     {
       name: 'Milagros',
-      message: 'text right garbanzos'
+      _showMilagrosName: false,
+      _showEden: false,
+      _showMilagros: false,
+      message: '(Unos días después)'
     },
     {
       name: 'Edén',
-      message: 'woohoo'
-    }
-  ],
-  [
+      _showEden: true,
+      _showMilagrosName: true,
+      message:
+        '¡Milaaaagroooooooooooos! Es que no sé qué estoy haciendo mal, pero mira, mira, ¡todas mis habitas muertecitas!',
+      bg: '/bg-1.png'
+    },
+    {
+      _showMilagros: true,
+      name: 'Milagros',
+      message: 'Ay, mi niña, ¡tienes pulgones!'
+    },
+    {
+      name: 'Edén',
+      message: '¡Hala, qué asco! ¿Qué hago, echo insecticida?'
+    },
     {
       name: 'Milagros',
-      message: 'false fail habas'
+      message: '¡Ni se te ocurra!'
     },
     {
       name: 'Edén',
-      message: 'a'
+      message: 'Pero... Los pulgones...'
+    },
+    {
+      name: 'Milagros',
+      message:
+        '¡Que no! ¡Más químicos al suelo! ¡Sí, hombre! ¡Y echamos herbicida también! ¡Que no crezca nada más entre el antrax del desguace y todo lo demás!'
+    },
+    {
+      name: 'Edén',
+      message: '...'
+    },
+    {
+      name: 'Edén',
+      message: '...No, si tienes razón.'
+    },
+    {
+      name: 'Milagros',
+      message: '¡Pues claro que tengo razón!'
+    },
+    {
+      name: 'Edén',
+      message: 'Entonces, ¿nos rendimos? ¿Ya?'
+    },
+    {
+      name: 'Milagros',
+      message: '¿¡Qué te vas a rendir ni rendir, Edén!?'
+    },
+    {
+      name: 'Milagros',
+      message:
+        'Mira, te voy a enseñar a hacer un hotelcito monísimo para insectos, cinco estrellas, para que tengan donde esconderse, que como esto sigue siendo un secarral por más bombas de semillas que yo tire, los pobres no pueden vivir aquí.'
+    },
+    {
+      name: 'Edén',
+      message: '¿Un... hotel? ¿Quieres traer más insectos?'
+    },
+    {
+      name: 'Milagros',
+      message:
+        '¡Claro! ¡Para que se coman los pulgones! Venga, recoge unas cañitas o busca papel, que te enseño a hacerlo.'
+    },
+    {
+      name: 'Milagros',
+      message:
+        'Cuando lo tengas, cuélgalo a un metro y algo con un palo o de una rama del almendro, y ya verás como en un par de semanas puedes volver a intentarlo y no te comen viva tantos pulgones.'
+    },
+    {
+      name: 'Milagros',
+      message:
+        '¡Y deja ya de arrancar las hierbas que no estén justo en tus matitas, que a ver dónde esperas que se escondan los lagartos y las mariquitas para quitarte los pulgones y los mosquitos!'
     }
   ],
   [
