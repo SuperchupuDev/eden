@@ -22,6 +22,8 @@ interface FarmTileProps {
   setVN: (vn: boolean) => void;
   setSeedLevel: (level: number) => void;
   setToolLevel: (level: number) => void;
+  level: number;
+  setLevel: (level: number) => void;
 }
 
 export const FarmTile = ({
@@ -37,7 +39,9 @@ export const FarmTile = ({
   setVN,
   gridStates,
   setSeedLevel,
-  setToolLevel
+  setToolLevel,
+  level,
+  setLevel
 }: FarmTileProps) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -49,7 +53,21 @@ export const FarmTile = ({
     <button
       className={`farm-selector ${selected ? 'selected' : ''}`}
       onMouseDown={() =>
-        handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid: gridStates, setSeedLevel, setToolLevel })
+        handleClick({
+          id,
+          seed,
+          selected,
+          setSelected,
+          state,
+          setState,
+          setTalk,
+          setVN,
+          grid: gridStates,
+          setSeedLevel,
+          setToolLevel,
+          level,
+          setLevel
+        })
       }
       onMouseOver={() => setFocused(id)}
       onFocus={() => setFocused(id)}
@@ -75,18 +93,40 @@ interface ClickProps {
   setVN: (vn: boolean) => void;
   setSeedLevel: (level: number) => void;
   setToolLevel: (level: number) => void;
+  level: number;
+  setLevel: (level: number) => void;
 }
 
-function handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid, setSeedLevel, setToolLevel }: ClickProps) {
-  if (seed === 13 && state === 0) {
-    if (grid.flat().filter(([state]) => state === 1).length === 17) {
-      setTalk(1);
-      setVN(true);
-      setSeedLevel(1);
-      setToolLevel(3);
-    }
+function handleClick({
+  id,
+  seed,
+  selected,
+  setSelected,
+  state,
+  setState,
+  setTalk,
+  setVN,
+  grid,
+  setSeedLevel,
+  setToolLevel,
+  level,
+  setLevel
+}: ClickProps) {
+  switch (level) {
+    case 0: {
+      if (seed === 13 && state === 0) {
+        if (grid.flat().filter(([state]) => state === 1).length === 17) {
+          setLevel(1);
+          setTalk(1);
+          setVN(true);
+          setSeedLevel(1);
+          setToolLevel(3);
+        }
 
-    setState(1);
+        setState(1);
+      }
+      break;
+    }
   }
 
   setSelected(selected ? null : id);

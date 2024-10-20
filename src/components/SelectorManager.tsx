@@ -13,10 +13,20 @@ interface SelectorManagerProps {
 export const SelectorManager = ({ selected, setSelected, seedLevel, toolLevel }: SelectorManagerProps) => (
   <div id="left-side">
     <div id="top-left">
-      <SeedSelector data={data.filter(e => e.id <= 12)} selected={selected} setSelected={setSelected} level={seedLevel} />
+      <SeedSelector
+        data={data.filter(e => e.id <= 12)}
+        selected={selected}
+        setSelected={setSelected}
+        level={seedLevel}
+      />
     </div>
     <div id="bottom-left">
-      <ToolSelector data={data.filter(e => e.id > 12)} selected={selected} setSelected={setSelected} level={toolLevel} />
+      <ToolSelector
+        data={data.filter(e => e.id > 12)}
+        selected={selected}
+        setSelected={setSelected}
+        level={toolLevel}
+      />
     </div>
   </div>
 );

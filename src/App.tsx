@@ -14,6 +14,14 @@ function App() {
   const [seedLevel, setSeedLevel] = useState(0);
   const [toolLevel, setToolLevel] = useState(1);
 
+  const [level, setLevel] = useState(0);
+
+  const states = [
+    [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)],
+    [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)],
+    [useState(0), useState(0), useState(0), useState(0), useState(0), useState(0)]
+  ];
+
   return vn ? (
     <VN setVN={setVN} talk={talk} />
   ) : (
@@ -21,7 +29,16 @@ function App() {
       <SelectorManager selected={selected} setSelected={setSelected} seedLevel={seedLevel} toolLevel={toolLevel + 12} />
       <div id="right-side">
         <div id="farm">
-          <FarmGrid seed={selected} setTalk={setTalk} setVN={setVN} setSeedLevel={setSeedLevel} setToolLevel={setToolLevel} />
+          <FarmGrid
+            seed={selected}
+            setTalk={setTalk}
+            setVN={setVN}
+            setSeedLevel={setSeedLevel}
+            setToolLevel={setToolLevel}
+            level={level}
+            setLevel={setLevel}
+            states={states}
+          />
         </div>
         <button type="button" onClick={() => setVN(true)}>
           [Debug] VN

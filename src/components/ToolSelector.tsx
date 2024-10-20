@@ -8,7 +8,6 @@ interface ToolSelectorProps {
 }
 
 export const ToolSelector = ({ data, level, selected, setSelected }: ToolSelectorProps) => {
-
   return (
     <div>
       <Selector data={data} level={level} selected={selected} setSelected={setSelected} />
