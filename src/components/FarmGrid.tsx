@@ -62,9 +62,11 @@ interface FarmGridProps {
   seed: number | null;
   setTalk: (talk: number) => void;
   setVN: (vn: boolean) => void;
+  setSeedLevel: (level: number) => void;
+  setToolLevel: (level: number) => void;
 }
 
-export const FarmGrid = ({ seed, setTalk, setVN }: FarmGridProps) => {
+export const FarmGrid = ({ seed, setTalk, setVN, setSeedLevel, setToolLevel }: FarmGridProps) => {
   const [selected, setSelected] = useState<number | null>(null);
   const [focused, setFocused] = useState<number | null>(null);
 
@@ -93,6 +95,8 @@ export const FarmGrid = ({ seed, setTalk, setVN }: FarmGridProps) => {
             gridStates={states}
             setTalk={setTalk}
             setVN={setVN}
+            setSeedLevel={setSeedLevel}
+            setToolLevel={setToolLevel}
           />
         );
       })}

@@ -20,6 +20,8 @@ interface FarmTileProps {
   gridStates: [number, (state: number) => void][][];
   setTalk: (talk: number) => void;
   setVN: (vn: boolean) => void;
+  setSeedLevel: (level: number) => void;
+  setToolLevel: (level: number) => void;
 }
 
 export const FarmTile = ({
@@ -33,7 +35,9 @@ export const FarmTile = ({
   setState,
   setTalk,
   setVN,
-  gridStates
+  gridStates,
+  setSeedLevel,
+  setToolLevel
 }: FarmTileProps) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -44,7 +48,9 @@ export const FarmTile = ({
   return (
     <button
       className={`farm-selector ${selected ? 'selected' : ''}`}
-      onClick={() => handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid: gridStates })}
+      onMouseDown={() =>
+        handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid: gridStates, setSeedLevel, setToolLevel })
+      }
       onMouseOver={() => setFocused(id)}
       onFocus={() => setFocused(id)}
       onMouseOut={() => (focused ? setFocused(null) : null)}
@@ -67,16 +73,20 @@ interface ClickProps {
   setState: (state: number) => void;
   setTalk: (talk: number) => void;
   setVN: (vn: boolean) => void;
+  setSeedLevel: (level: number) => void;
+  setToolLevel: (level: number) => void;
 }
 
-function handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid }: ClickProps) {
+function handleClick({ id, seed, selected, setSelected, state, setState, setTalk, setVN, grid, setSeedLevel, setToolLevel }: ClickProps) {
   if (seed === 13 && state === 0) {
-    setState(1);
-  }
+    if (grid.flat().filter(([state]) => state === 1).length === 17) {
+      setTalk(1);
+      setVN(true);
+      setSeedLevel(1);
+      setToolLevel(3);
+    }
 
-  if (grid.flat().filter(([state]) => state === 1).length === 17 && seed === 13 && state === 0) {
-    setTalk(1);
-    setVN(true);
+    setState(1);
   }
 
   setSelected(selected ? null : id);

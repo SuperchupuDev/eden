@@ -1,18 +1,16 @@
-import { useState } from 'react';
 import { Selector } from './Selector';
 
 interface SeedSelectorProps {
   data: { id: number; name: string; url?: string }[];
   selected: number | null;
   setSelected: (id: number | null) => void;
+  level: number;
 }
 
-export const SeedSelector = ({ data, selected, setSelected }: SeedSelectorProps) => {
-  const [level, setLevel] = useState<number>(0);
-
+export const SeedSelector = ({ data, level, selected, setSelected }: SeedSelectorProps) => {
   return (
     <div>
-      <Selector data={data} level={level} setLevel={setLevel} selected={selected} setSelected={setSelected} />
+      <Selector data={data} level={level} selected={selected} setSelected={setSelected} />
     </div>
   );
 };

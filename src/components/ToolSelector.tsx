@@ -1,18 +1,17 @@
-import { useState } from 'react';
 import { Selector } from './Selector';
 
 interface ToolSelectorProps {
   data: { id: number; name: string; url?: string }[];
   selected: number | null;
   setSelected: (id: number | null) => void;
+  level: number;
 }
 
-export const ToolSelector = ({ data, selected, setSelected }: ToolSelectorProps) => {
-  const [level, setLevel] = useState<number>(13);
+export const ToolSelector = ({ data, level, selected, setSelected }: ToolSelectorProps) => {
 
   return (
     <div>
-      <Selector data={data} level={level} setLevel={setLevel} selected={selected} setSelected={setSelected} />
+      <Selector data={data} level={level} selected={selected} setSelected={setSelected} />
     </div>
   );
 };
