@@ -29,15 +29,15 @@ function App() {
       <>
         <h1>Edén</h1>
         Por{' '}
-        <a href="https://twitter.com/superchupu" target="_blank">
+        <a href="https://twitter.com/superchupu" target="_blank" rel="noopener">
           Madeline
         </a>
         ,{' '}
-        <a href="https://twitter.com/Rainbow_aspirin" target="_blank">
+        <a href="https://twitter.com/Rainbow_aspirin" target="_blank" rel="noopener">
           Celia
         </a>{' '}
         y{' '}
-        <a href="https://twitter.com/Imocade" target="_blank">
+        <a href="https://twitter.com/Imocade" target="_blank" rel="noopener">
           Abdiel
         </a>
         <br />

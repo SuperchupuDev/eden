@@ -95,7 +95,7 @@ export const VN = ({ setVN, talk, setIsWin }: VNProps) => {
           <p
             className="talk"
             id="conversation"
-            // biome-ignore lint/a11y/noNoninteractiveTabindex: <explanation>
+            // biome-ignore lint/a11y/noNoninteractiveTabindex: cant
             tabIndex={0}
             onClick={() => handleClick({ talk, playing, setPlaying, conversation, setText, setVN, setIsWin })}
             onKeyUp={e =>
@@ -124,7 +124,11 @@ function getName({
   name,
   showEdenName,
   showMilagrosName
-}: { name: string; showEdenName: boolean; showMilagrosName: boolean }) {
+}: {
+  name: string;
+  showEdenName: boolean;
+  showMilagrosName: boolean;
+}) {
   if (name === 'Edén' && !showEdenName) {
     return '???';
   }

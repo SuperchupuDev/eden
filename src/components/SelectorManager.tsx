@@ -1,7 +1,6 @@
+import { data } from '../data';
 import { SeedSelector } from './SeedSelector';
 import { ToolSelector } from './ToolSelector';
-
-import { data } from '../data';
 
 interface SelectorManagerProps {
   selected: number | null;

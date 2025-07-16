@@ -1,22 +1,21 @@
-import garbanzos from './assets/seeds/garbanzos.png';
-import habas from './assets/seeds/habas.png';
+import ajo from './assets/seeds/ajo.png';
 import aromaticas from './assets/seeds/aromaticas.png';
 import berenjenas from './assets/seeds/berenjenas.png';
 import calabacines from './assets/seeds/calabacines.png';
 import cebolla from './assets/seeds/cebolla.png';
-import ajo from './assets/seeds/ajo.png';
-import vid from './assets/seeds/vid.png';
-import laurel from './assets/seeds/laurel.png';
 import chumbera from './assets/seeds/chumbera.png';
-import tomate from './assets/seeds/tomate.png';
+import garbanzos from './assets/seeds/garbanzos.png';
+import habas from './assets/seeds/habas.png';
 import hinojo from './assets/seeds/hinojo.png';
-
-import mano from './assets/tools/mano.png';
+import laurel from './assets/seeds/laurel.png';
+import tomate from './assets/seeds/tomate.png';
+import vid from './assets/seeds/vid.png';
+import abono from './assets/tools/abono.png';
 import azada from './assets/tools/azada.png';
+import hotel from './assets/tools/hotel.png';
+import mano from './assets/tools/mano.png';
 import regadera from './assets/tools/regadera.png';
 import yerbajos from './assets/tools/yerbajos.png';
-import abono from './assets/tools/abono.png';
-import hotel from './assets/tools/hotel.png';
 
 export const data = [
   {

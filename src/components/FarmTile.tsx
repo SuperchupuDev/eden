@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
-
-import { data } from '../data';
 import seedsUrl from '../assets/seeds.png';
+import { data } from '../data';
 
 const states = [
   { id: 0, url: '/grid-trash.png' },
@@ -117,7 +116,9 @@ function handleClick({
   level,
   setLevel
 }: ClickProps) {
-  if (!seed) return;
+  if (!seed) {
+    return;
+  }
   if (seed === 13 && level !== 0) {
     return setState(1);
   }
@@ -192,13 +193,7 @@ interface CheckProps {
   grid?: [number, (state: number) => void][][];
 }
 
-function checkGarbanzos({
-  seed,
-  state,
-  setState,
-  win = () => null,
-  fail = () => (console.log(1), setState(1))
-}: CheckProps) {
+function checkGarbanzos({ seed, state, setState, win = () => null, fail = () => setState(1) }: CheckProps) {
   console.log('checkGarbanzos', seed, state);
   if (state === 1) {
     if (seed === 14) {
@@ -225,15 +220,7 @@ function checkGarbanzos({
   }
 }
 
-function checkHabas({
-  seed,
-  state,
-  setState,
-  win = () => null,
-  fail = () => (console.log(1), setState(1)),
-  fake,
-  grid
-}: CheckProps) {
+function checkHabas({ seed, state, setState, win = () => null, fail = () => setState(1), fake, grid }: CheckProps) {
   console.log('checkHabas', seed, state);
   console.log(grid);
   if (state === 1) {
